@@ -5,9 +5,10 @@ import Dashboard from "./pages/Dashboard";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Prescriptions from "./pages/Prescriptions";
-import Processing from "./pages/Processing";
 import OrderDetails from "./pages/OrderDetails";
-import Upload from "./pages/Upload";
+import PrescriptionUpload from "./pages/PrescriptionUpload";
+import MedicalImageUpload from "./pages/MedicalImageUpload";
+import AnalysisDetails from "./pages/AnalysisDetails";
 
 function App() {
   return (
@@ -19,10 +20,9 @@ function App() {
           <Route path="*" element={<Login />} />
           <Route element={<Layout />}>
             <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/upload" element={<Upload/>} />
-            <Route path="/prescriptions" element={<Prescriptions />} />
-            <Route path="/processing" element={<Processing />} />
-            <Route path="/order/:id" element={<OrderDetails />} />
+            <Route path="/prescription_upload" element={<PrescriptionUpload/>} />
+            <Route path="/medical_image_upload" element={<MedicalImageUpload/>} />
+            <Route path="/analysis/:id" element={<AnalysisDetails />} />
           </Route>
         </Routes>
       </Router>
