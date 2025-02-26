@@ -23,7 +23,7 @@ const processPrescription = async (file: File) => {
       }
     });
 
-    return nerResponse.data;
+    return nerResponse.data.report;
 
   } catch (error) {
     console.error("Error processing prescription:", error);
